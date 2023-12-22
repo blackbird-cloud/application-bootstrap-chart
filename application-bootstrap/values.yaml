@@ -1,0 +1,56 @@
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Automatically mount a ServiceAccount's API credentials?
+  automount: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+namespace:
+  # Specifies whether a namespace should be created for the application
+  create: true
+  # The name of the namespace in which the application will be deployed
+  name: my-application
+  # Labels to add to the namespace
+  labels: {}
+  # Annotations to add to the namespace
+  annotations:
+    helm.sh/hook: pre-install
+    helm.sh/hook-weight: -5
+
+role:
+  # Specifies whether a role should be created for the application
+  create: false
+  # Labels to add to the role
+  labels: {}
+  # Annotations to add to the role
+  annotations: {}
+  # The rules to add to the role
+  rules: []
+
+secretproviderclass:
+  # Specifies whether a secretproviderclass should be created for the application
+  create: false
+  # The spec for the secretproviderclass
+  spec:
+    {}
+    # provider: aws
+    # secretObjects:
+    #   - data: []
+    #     secretName: ""
+    #     type: Opaque
+
+    # parameters:
+    #   objects: ""
+
+argoapplication:
+  # Specifies whether a Argo Application should be created for the application
+  create: false
+  # The spec for the Argo Application
+  spec: {}
