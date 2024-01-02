@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{ include "application-bootstrap.fullname" . }}
-  namespace: {{ .Values.namespace.name }}
+  namespace: {{ .Values.argoapplication.namespace }}
   labels:
     {{- include "application-bootstrap.labels" . | nindent 4 }}
 {{- with .Values.argoapplication.spec }}

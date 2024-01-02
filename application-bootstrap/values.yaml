@@ -52,5 +52,7 @@ secretproviderclass:
 argoapplication:
   # Specifies whether a Argo Application should be created for the application
   create: false
+  # Specifies in which namespace the Argo Application should be created
+  namespace: argo-cd
   # The spec for the Argo Application
   spec: {}
