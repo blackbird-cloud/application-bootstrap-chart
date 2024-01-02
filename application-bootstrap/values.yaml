@@ -22,7 +22,7 @@ namespace:
   # Annotations to add to the namespace
   annotations:
     helm.sh/hook: pre-install
-    helm.sh/hook-weight: -5
+    helm.sh/hook-weight: "-5"
 
 role:
   # Specifies whether a role should be created for the application
